@@ -5,11 +5,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-// @RequestMapping ("/Hello")
+@RequestMapping ("/Hello")
 public class HelloController {
 
     @GetMapping("/Poorty")
     public String hello() {
         return "This is modified by Poorty Hello, Spring Boot!";
+    }
+
+    @GetMapping ()
+    public String helloDefault() {
+        return "Hello, Spring Boot!";
     }
 }
